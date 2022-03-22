@@ -1,6 +1,6 @@
 # A Typed Mini Web Framework
 
-A wed framework build on typescript with the gola of pushing the boundaries with the use types
+A wed framework build on typescript with the goal of pushing the boundaries with the use types
 
 ## Tech Stack
 

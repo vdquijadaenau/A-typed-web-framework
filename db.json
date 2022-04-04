@@ -2,8 +2,18 @@
   "users": [
     {
       "name": "victor",
-      "age": 12,
+      "age": 11,
       "id": 1
+    },
+    {
+      "name": "victoria",
+      "age": 22,
+      "id": 2
+    },
+    {
+      "name": "Sofia",
+      "age": 13,
+      "id": 3
     }
   ]
 }

@@ -1,10 +1,10 @@
-import { AxiosResponse } from "axios";
 import { Attributes } from "./Atrributes";
 import { Eventing } from "./Eventing";
 import { Model } from "./Model";
 import { APISync } from "./APISync";
+import { Collection } from "./Collection";
 
-interface UserProps {
+export interface UserProps {
   id?: number;
   name?: string;
   age?: number;
@@ -18,6 +18,12 @@ export class User extends Model<UserProps> {
       new Attributes<UserProps>(attrs),
       new APISync<UserProps>(rootUrl),
       new Eventing()
+    );
+  }
+
+  static createUserCollection(): Collection<User, UserProps> {
+    return new Collection<User, UserProps>(rootUrl, (json: UserProps) =>
+      User.createUser(json)
     );
   }
 }
